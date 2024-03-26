@@ -41,17 +41,64 @@ fun Greeting() {
         Text(text = "Android", color = Color.Magenta, fontFamily = FontFamily.Cursive)
         Text(text = "Programming codes", color = Color.Cyan)
 
-val about = LocalContext.current
+        val about = LocalContext.current
+     Button(onClick = {
+
+         about.startActivity(Intent(about, AboutActivity::class.java))
+
+     }) {
+
+         Text(text = "About")
+
+     }
+
+
+        val inp = LocalContext.current
         Button(onClick = {
 
-            about.startActivity(Intent(about, AboutActivity::class.java))
-
-
+            inp.startActivity(Intent(inp, InputActivity::class.java))
 
         }) {
-            Text(text = "About screen")
+
+            Text(text = "Input")
+
         }
+
+
+
+
+        val scr = LocalContext.current
+        Button(onClick = {
+
+            scr.startActivity(Intent(inp, ScrollActivity::class.java))
+
+        }) {
+
+            Text(text = "Scroll Page")
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
+
 }
+
+
 
