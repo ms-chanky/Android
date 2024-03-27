@@ -79,6 +79,34 @@ fun Greeting() {
         }
 
 
+        val card = LocalContext.current
+        Button(onClick = {
+
+            card.startActivity(Intent(inp, CardActivity::class.java))
+
+        }) {
+
+            Text(text = "Cards Page")
+
+        }
+
+        val gr = LocalContext.current
+        Button(onClick = {
+
+            gr.startActivity(Intent(inp, GridActivity::class.java))
+
+        }) {
+
+            Text(text = "Grid Page")
+
+        }
+
+
+
+
+
+
+
 
 
 
