@@ -100,6 +100,37 @@ fun Greeting() {
             Text(text = "Grid Page")
 
         }
+        val click = LocalContext.current
+        Button(onClick = {
+
+            click.startActivity(Intent(inp, ClickableImageActivity::class.java))
+
+        }) {
+
+            Text(text = "Camera")
+
+        }
+        val assig = LocalContext.current
+        Button(onClick = {
+
+            assig.startActivity(Intent(inp, AssignmentActivity::class.java))
+
+        }) {
+
+            Text(text = "Assignment Page")
+
+        }
+        val web = LocalContext.current
+        Button(onClick = {
+
+            web.startActivity(Intent(inp, WebActivity::class.java))
+
+        }) {
+
+            Text(text = "Web Page")
+
+        }
+
 
 
 

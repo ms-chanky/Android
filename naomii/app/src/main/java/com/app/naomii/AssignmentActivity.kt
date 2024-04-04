@@ -37,6 +37,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.app.naomii.ui.theme.NaomiiTheme
@@ -104,7 +105,7 @@ fun Assignment() {
 
                             Row {
                                 androidx.compose.foundation.Image(
-                                    painter = painterResource(id = R.drawable.moon),
+                                    painter = painterResource(id = R.drawable.hotel),
                                     contentDescription = ""
                                 )
                                 Text(text = "Hotels",
@@ -238,8 +239,11 @@ fun Assignment() {
                         Text(text = "View all", color = Color.Cyan)
                     }
                     Spacer(modifier = Modifier.height(30.dp))
+
                     Row {
+
                         Spacer(modifier = Modifier.width(20.dp))
+
                         Card (
                             elevation = CardDefaults.cardElevation(35.dp),
 //                    border = BorderStroke(1.dp, Color.Black),
@@ -247,20 +251,25 @@ fun Assignment() {
 
                         )
                         {
-
+                            androidx.compose.foundation.Image(
+                                    painter = painterResource(id = R.drawable.one),
+                                    contentDescription = "")
+                            
+                            Text(text = "Nusa Penida")
                             Row {
-                                androidx.compose.foundation.Image(
-                                    painter = painterResource(id = R.drawable.road),
-                                    contentDescription = ""
-                                )
-                                Text(text = "Ticket",
-                                    modifier = Modifier.padding(top = 20.dp))
-
+                                Icon(imageVector = Icons.Default.LocationOn,
+                                    contentDescription = "")
+                                Text(text = "Nusapenida,Bali")
+                                
                             }
+                            
+                                
 
 
 
-                        }
+
+
+                        
                     }
 
 
